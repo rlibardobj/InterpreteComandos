@@ -1,1 +1,2 @@
 C:\Users\Ronny\Documents\GitHub\InterpreteComandos\Tecnológico\InterpreteComandos\bin\Debug\InterpreteComandos.exe.config
+C:\Users\Ronny\Documents\GitHub\InterpreteComandos\InterpreteComandos\bin\Debug\InterpreteComandos.exe.config
