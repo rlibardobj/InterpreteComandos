@@ -8,5 +8,11 @@ namespace InterpreteComandos
 {
     class Núcleo
     {
+        private Comandos comandos = new Comandos();
+
+        public Object EjecutarComando()
+        {
+            return comandos.FindFile("proyector.png");
+        }
     }
 }

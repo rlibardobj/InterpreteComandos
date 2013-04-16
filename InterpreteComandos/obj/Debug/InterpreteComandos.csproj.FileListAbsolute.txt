@@ -1,2 +1,15 @@
 C:\Users\Ronny\Documents\GitHub\InterpreteComandos\Tecnológico\InterpreteComandos\bin\Debug\InterpreteComandos.exe.config
 C:\Users\Ronny\Documents\GitHub\InterpreteComandos\InterpreteComandos\bin\Debug\InterpreteComandos.exe.config
+C:\Users\Ronny\Documents\GitHub\InterpreteComandos\InterpreteComandos\obj\Debug\InterpreteComandos.csprojResolveAssemblyReference.cache
+C:\Users\Ronny\Documents\GitHub\InterpreteComandos\InterpreteComandos\obj\Debug\InterpreteComandos.Properties.Resources.resources
+C:\Users\Ronny\Documents\GitHub\InterpreteComandos\InterpreteComandos\obj\Debug\InterpreteComandos.csproj.GenerateResource.Cache
+C:\Users\Ronny\Documents\GitHub\InterpreteComandos\InterpreteComandos\bin\Debug\InterpreteComandos.exe
+C:\Users\Ronny\Documents\GitHub\InterpreteComandos\InterpreteComandos\bin\Debug\InterpreteComandos.pdb
+C:\Users\Ronny\Documents\GitHub\InterpreteComandos\InterpreteComandos\obj\Debug\InterpreteComandos.exe
+C:\Users\Ronny\Documents\GitHub\InterpreteComandos\InterpreteComandos\obj\Debug\InterpreteComandos.pdb
+C:\Users\Ronny\Documents\GitHub\InterpreteComandos\InterpreteComandos\obj\Debug\InterpreteComandos.Form1.resources
+C:\Users\Ronny\Documents\GitHub\InterpreteComandos\InterpreteComandos\bin\Debug\InterpreteComandos.exe.manifest
+C:\Users\Ronny\Documents\GitHub\InterpreteComandos\InterpreteComandos\bin\Debug\InterpreteComandos.application
+C:\Users\Ronny\Documents\GitHub\InterpreteComandos\InterpreteComandos\obj\Debug\InterpreteComandos.TrustInfo.xml
+C:\Users\Ronny\Documents\GitHub\InterpreteComandos\InterpreteComandos\obj\Debug\InterpreteComandos.exe.manifest
+C:\Users\Ronny\Documents\GitHub\InterpreteComandos\InterpreteComandos\obj\Debug\InterpreteComandos.application
