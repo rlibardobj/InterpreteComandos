@@ -27,26 +27,77 @@ namespace InterpreteComandos
                                     switch (SplittedCommand[2])
                                     {
                                         case "-first": 
-                                            { 
-                                                break; 
+                                            {
+                                                this.Results.AddRange(Comandos.FindFile(SplittedCommand[3],1));
+                                                return Results;
                                             }
                                         case "-FIRST": 
-                                            { 
-                                                break; 
+                                            {
+                                                this.Results.AddRange(Comandos.FindFile(SplittedCommand[3], 1));
+                                                return Results;  
                                             }
                                         default: 
                                             {
                                                 String[] FilesToBeSearched = SplittedCommand[2].Split(new char[] { ',' });
                                                 for (int a = 0; a < FilesToBeSearched.Length; a++)
                                                 {
-                                                    this.Results.AddRange(Comandos.FindFile(FilesToBeSearched[a]));
+                                                    this.Results.AddRange(Comandos.FindFile(FilesToBeSearched[a],0));
                                                 }
                                                 return Results;
                                             }
                                     }
                                     break; 
                                 }
-                            case "FILE": { break; }
+                            case "FILE":
+                                {
+                                    switch (SplittedCommand[2])
+                                    {
+                                        case "-first":
+                                            {
+                                                this.Results.AddRange(Comandos.FindFile(SplittedCommand[3], 1));
+                                                return Results;
+                                            }
+                                        case "-FIRST":
+                                            {
+                                                this.Results.AddRange(Comandos.FindFile(SplittedCommand[3], 1));
+                                                return Results;
+                                            }
+                                        default:
+                                            {
+                                                String[] FilesToBeSearched = SplittedCommand[2].Split(new char[] { ',' });
+                                                for (int a = 0; a < FilesToBeSearched.Length; a++)
+                                                {
+                                                    this.Results.AddRange(Comandos.FindFile(FilesToBeSearched[a], 0));
+                                                }
+                                                return Results;
+                                            }
+                                    }
+                                    break;
+                                }
+                            case "text":
+                                {
+                                    break;
+                                }
+                            case "TEXT":
+                                {
+                                    break;
+                                }
+                            case "user":
+                                {
+                                    break;
+                                }
+                            case "USER":
+                                {
+                                    break;
+                                }
+                            case "group":
+                                {
+                                    break;
+                                }
+                            case "GROUP":
+                                {
+                                    break;
+                                }
                             default: 
                                 { 
                                     return "El comando " + Command + "no puede ser interpretado.";

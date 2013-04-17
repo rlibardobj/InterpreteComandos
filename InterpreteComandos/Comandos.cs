@@ -10,11 +10,11 @@ namespace InterpreteComandos
     class Comandos
     {
         List<String> Files = new List<String>();
-        public List<String> FindFile(String FileName)
+        public List<String> FindFile(String FileName, int SearchType)
         {
             Files.Clear();
             //foreach (DriveInfo d in DriveInfo.GetDrives().Where(x => x.IsReady == true))
-            FindInDirectory(new DirectoryInfo("E:/"), FileName, 0);
+            FindInDirectory(new DirectoryInfo("E:/"), FileName, SearchType);
             return Files;
         }
 
@@ -49,8 +49,8 @@ namespace InterpreteComandos
                             {
                                 if (FileInfo.Name.Equals(FileNameTextString[0]))
                                 {
-                                    FileStream FileContent = FileInfo.OpenRead();
-                                    if (FileContent.ToString().Contains(FileNameTextString[1]))
+                                    StreamReader FileContent = FileInfo.OpenText();
+                                    if (FileContent.ReadToEnd().ToString().Contains(FileNameTextString[1]))
                                         this.Files.Add(FileInfo.FullName);
                                 }
                             }

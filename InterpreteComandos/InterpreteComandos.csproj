@@ -86,7 +86,9 @@
     <Compile Include="V_procesos_servicios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="V_procesos_servicios.Designer.cs" />
+    <Compile Include="V_procesos_servicios.designer.cs">
+      <DependentUpon>V_procesos_servicios.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -99,7 +101,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="V_procesos_servicios.resx" />
+    <EmbeddedResource Include="V_procesos_servicios.resx">
+      <DependentUpon>V_procesos_servicios.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
