@@ -30,41 +30,41 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.button3 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.id_procesos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre_procesos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcion_procesos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cpu_procesos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.memoria_procesos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usuario_procesos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.button6 = new System.Windows.Forms.Button();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.id_servicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombre_servicios = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descripcion_servicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.usuario_servicios = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label6 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button6 = new System.Windows.Forms.Button();
-            this.usuario_procesos = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.memoria_procesos = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cpu_procesos = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descripcion_procesos = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombre_procesos = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.id_procesos = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label4 = new System.Windows.Forms.Label();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.label5 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            this.tabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.tabPage3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -96,13 +96,29 @@
             this.tabPage1.Text = "Procesos";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(446, 391);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 37);
+            this.button3.TabIndex = 7;
+            this.button3.Text = "Iniciar Proceso";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(238, 400);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(182, 20);
+            this.textBox1.TabIndex = 6;
+            // 
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(612, 295);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 5;
-            this.button2.Text = "Detener";
+            this.button2.Text = "Suspender";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // button1
@@ -146,6 +162,54 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Procesos en Ejecución";
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id_procesos,
+            this.nombre_procesos,
+            this.descripcion_procesos,
+            this.cpu_procesos,
+            this.memoria_procesos,
+            this.usuario_procesos});
+            this.dataGridView1.Location = new System.Drawing.Point(42, 57);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(645, 232);
+            this.dataGridView1.TabIndex = 0;
+            // 
+            // id_procesos
+            // 
+            this.id_procesos.HeaderText = "ID";
+            this.id_procesos.Name = "id_procesos";
+            // 
+            // nombre_procesos
+            // 
+            this.nombre_procesos.HeaderText = "Nombre";
+            this.nombre_procesos.Name = "nombre_procesos";
+            // 
+            // descripcion_procesos
+            // 
+            this.descripcion_procesos.HeaderText = "Descripción";
+            this.descripcion_procesos.Name = "descripcion_procesos";
+            // 
+            // cpu_procesos
+            // 
+            this.cpu_procesos.HeaderText = "CPU";
+            this.cpu_procesos.Name = "cpu_procesos";
+            // 
+            // memoria_procesos
+            // 
+            this.memoria_procesos.HeaderText = "Memoria";
+            this.memoria_procesos.Name = "memoria_procesos";
+            // 
+            // usuario_procesos
+            // 
+            this.usuario_procesos.HeaderText = "Usuario";
+            this.usuario_procesos.Name = "usuario_procesos";
+            // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.button6);
@@ -164,52 +228,58 @@
             this.tabPage2.Text = "Servicios";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // tabPage3
+            // button6
             // 
-            this.tabPage3.Controls.Add(this.label5);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(732, 472);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Estadísticas";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            this.button6.Location = new System.Drawing.Point(473, 393);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(75, 41);
+            this.button6.TabIndex = 9;
+            this.button6.Text = "Iniciar Proceso";
+            this.button6.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // textBox2
             // 
-            this.textBox1.Location = new System.Drawing.Point(238, 400);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(182, 20);
-            this.textBox1.TabIndex = 6;
+            this.textBox2.Location = new System.Drawing.Point(251, 404);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(200, 20);
+            this.textBox2.TabIndex = 8;
             // 
-            // button3
+            // label7
             // 
-            this.button3.Location = new System.Drawing.Point(446, 391);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 37);
-            this.button3.TabIndex = 7;
-            this.button3.Text = "Iniciar Proceso";
-            this.button3.UseVisualStyleBackColor = true;
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(197, 404);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(47, 13);
+            this.label7.TabIndex = 7;
+            this.label7.Text = "Nombre:";
             // 
-            // label4
+            // button5
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Kristen ITC", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(212, 14);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(270, 29);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Servicios en Ejecución";
+            this.button5.Location = new System.Drawing.Point(501, 310);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.TabIndex = 6;
+            this.button5.Text = "Detener";
+            this.button5.UseVisualStyleBackColor = true;
             // 
-            // label5
+            // button4
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Kristen ITC", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(231, 222);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(271, 29);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Procesos en Ejecución";
+            this.button4.Location = new System.Drawing.Point(420, 310);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 5;
+            this.button4.Text = "Iniciar";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Kristen ITC", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(246, 348);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(196, 29);
+            this.label6.TabIndex = 4;
+            this.label6.Text = "Iniciar Servicios";
             // 
             // dataGridView2
             // 
@@ -244,103 +314,36 @@
             this.usuario_servicios.HeaderText = "Usuario";
             this.usuario_servicios.Name = "usuario_servicios";
             // 
-            // label6
+            // label4
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Kristen ITC", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(246, 348);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(196, 29);
-            this.label6.TabIndex = 4;
-            this.label6.Text = "Iniciar Servicios";
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Kristen ITC", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(212, 14);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(270, 29);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Servicios en Ejecución";
             // 
-            // button4
+            // tabPage3
             // 
-            this.button4.Location = new System.Drawing.Point(420, 310);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 5;
-            this.button4.Text = "Iniciar";
-            this.button4.UseVisualStyleBackColor = true;
+            this.tabPage3.Controls.Add(this.label5);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(732, 472);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Estadísticas";
+            this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // label5
             // 
-            this.button5.Location = new System.Drawing.Point(501, 310);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 6;
-            this.button5.Text = "Detener";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(197, 404);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(47, 13);
-            this.label7.TabIndex = 7;
-            this.label7.Text = "Nombre:";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(251, 404);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(200, 20);
-            this.textBox2.TabIndex = 8;
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(473, 393);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 41);
-            this.button6.TabIndex = 9;
-            this.button6.Text = "Iniciar Proceso";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // usuario_procesos
-            // 
-            this.usuario_procesos.HeaderText = "Usuario";
-            this.usuario_procesos.Name = "usuario_procesos";
-            // 
-            // memoria_procesos
-            // 
-            this.memoria_procesos.HeaderText = "Memoria";
-            this.memoria_procesos.Name = "memoria_procesos";
-            // 
-            // cpu_procesos
-            // 
-            this.cpu_procesos.HeaderText = "CPU";
-            this.cpu_procesos.Name = "cpu_procesos";
-            // 
-            // descripcion_procesos
-            // 
-            this.descripcion_procesos.HeaderText = "Descripción";
-            this.descripcion_procesos.Name = "descripcion_procesos";
-            // 
-            // nombre_procesos
-            // 
-            this.nombre_procesos.HeaderText = "Nombre";
-            this.nombre_procesos.Name = "nombre_procesos";
-            // 
-            // id_procesos
-            // 
-            this.id_procesos.HeaderText = "ID";
-            this.id_procesos.Name = "id_procesos";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.id_procesos,
-            this.nombre_procesos,
-            this.descripcion_procesos,
-            this.cpu_procesos,
-            this.memoria_procesos,
-            this.usuario_procesos});
-            this.dataGridView1.Location = new System.Drawing.Point(42, 57);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(645, 232);
-            this.dataGridView1.TabIndex = 0;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Kristen ITC", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(231, 222);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(271, 29);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Procesos en Ejecución";
             // 
             // V_procesos_servicios
             // 
@@ -353,12 +356,12 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }

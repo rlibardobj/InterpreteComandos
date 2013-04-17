@@ -10,19 +10,22 @@ namespace InterpreteComandos
 {
     class procesos
     {
+        ///
         public lista_procesos primero;
+        public int num_procesos; //Cantidad procesos activos
 
 
         /// <summary>
         /// Crea la lista de los procesos actuales
         /// </summary>
         public void procesos_ejecución() {
-
+           primero = null;
            Process[] procesos = Process.GetProcesses();
-           foreach (Process p in procesos)
+           int cantidad = 0;
+            foreach (Process p in procesos)
            {
-
-               String descripcion = p.MainModule.FileVersionInfo.FileDescription;
+               cantidad++;
+               String descripcion = getdescrip(p);
                String user = getUser(p.Id);
                String id = Convert.ToString(p.Id);
                String cpu = getcpu(p);
@@ -37,15 +40,30 @@ namespace InterpreteComandos
                    primero = temp;
                }
            }
+            num_procesos = cantidad;
         
+        }
+
+
+        /// <summary>
+        /// Retorna la descripción del proceso que recibe como parámetro
+        /// </summary>
+        public string getdescrip(Process p)
+        {
+            try
+            {
+                return p.MainModule.FileVersionInfo.FileDescription;
+            }
+            catch
+            {
+                return "";
+            }
         }
 
          
         /// <summary>
         /// Retorna el nombre usuario por el proceso que recibe de parámetro
         /// </summary>
-        /// <param name="processId"></param>
-        /// <returns></returns>
         public string getUser(int processId)
         {
             string query = "Select * From Win32_Process Where ProcessID = " + processId;
@@ -64,36 +82,54 @@ namespace InterpreteComandos
                 }
             }
 
-            return "NULL";
+            return "-";
         }
 
 
        /// <summary>
        /// Retorna el porcentaje de uso del CPU, del proceso que recibe como parámetro
        /// </summary>
-       /// <param name="p"></param>
-       /// <returns></returns>
        public String getcpu(Process p)
         {
-             Process proceso = p;
-             System.TimeSpan lifeInterval = (DateTime.Now - proceso.StartTime);
-            // Calcular el uso de CPU
-            Double CPU = (proceso.TotalProcessorTime.TotalMilliseconds /  lifeInterval.TotalMilliseconds) * 100;
-            return Convert.ToString(CPU);
+            try
+            {
+                Process proceso = p;
+                System.TimeSpan lifeInterval = (DateTime.Now - proceso.StartTime);
+                // Calcular el uso de CPU
+                Double CPU = (proceso.TotalProcessorTime.TotalMilliseconds / lifeInterval.TotalMilliseconds) * 100;
+                return Convert.ToString(CPU);
+            }
+            catch { return ""; }
         }
 
         /// <summary>
-        /// Actualiza la lista de procesos
+        /// Actualiza la lista de procesos, compara la cantidad enlazada con la lista, además comprueba si hay creados
         /// </summary>
-        /// <returns></returns>
        public Boolean actualizar() {
            Boolean estado = false;
+           int cantidad = 0;
+           lista_procesos temp = primero;
+           while (temp != null) {
+               temp = temp.sig;
+               cantidad++;
+           }
+           if (cantidad > num_procesos)//si es menor cantidad actualiza
+           {
+               estado = true;
+               return estado;
+           }
+           else { //sino busca procesos nuevos
+           
            Process[] procesos = Process.GetProcesses();
            foreach (Process p in procesos)
            {
                estado=buscar_proceso(p.Id);
+               cantidad++;
            }
-           return estado;
+             return estado;
+           }
+           
+           
        }
 
 
