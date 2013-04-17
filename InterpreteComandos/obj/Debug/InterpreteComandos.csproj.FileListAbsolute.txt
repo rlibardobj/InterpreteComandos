@@ -13,3 +13,4 @@ C:\Users\Ronny\Documents\GitHub\InterpreteComandos\InterpreteComandos\bin\Debug\
 C:\Users\Ronny\Documents\GitHub\InterpreteComandos\InterpreteComandos\obj\Debug\InterpreteComandos.TrustInfo.xml
 C:\Users\Ronny\Documents\GitHub\InterpreteComandos\InterpreteComandos\obj\Debug\InterpreteComandos.exe.manifest
 C:\Users\Ronny\Documents\GitHub\InterpreteComandos\InterpreteComandos\obj\Debug\InterpreteComandos.application
+C:\Users\Ronny\Documents\GitHub\InterpreteComandos\InterpreteComandos\obj\Debug\InterpreteComandos.V_procesos_servicios.resources
