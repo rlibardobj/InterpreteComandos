@@ -9,43 +9,68 @@ namespace InterpreteComandos
 {
     class Comandos
     {
+        List<String> Files = new List<String>();
         public List<String> FindFile(String FileName)
         {
-            var Files = new List<String>();
-            foreach (DriveInfo d in DriveInfo.GetDrives().Where(x => x.IsReady == true))
-            {
-                Files.Concat(FindInDirectory(d.RootDirectory));
-            }
+            Files.Clear();
+            //foreach (DriveInfo d in DriveInfo.GetDrives().Where(x => x.IsReady == true))
+            FindInDirectory(new DirectoryInfo("E:/"), FileName, 0);
             return Files;
         }
 
-        public List<String> FindInDirectory(DirectoryInfo Directory)
+        public void FindInDirectory(DirectoryInfo Directory,String FileName,int SearchType)
         {
+            try
+            {
+                switch (SearchType)
+                {
+                    default:
+                        {
+                            foreach (FileInfo FileInfo in Directory.GetFiles())
+                            {
+                                if (FileInfo.Name.Equals(FileName))
+                                    this.Files.Add(FileInfo.FullName);
+                            }
+                            break;
+                        }
+                    case 0:
+                        {
+                            foreach (FileInfo FileInfo in Directory.GetFiles())
+                            {
+                                if (FileInfo.Name.StartsWith(FileName))
+                                    this.Files.Add(FileInfo.FullName);
+                            }
+                            break;
+                        }
+                    case 1:
+                        {
+                            String[] FileNameTextString = FileName.Split();
+                            foreach (FileInfo FileInfo in Directory.GetFiles())
+                            {
+                                if (FileInfo.Name.Equals(FileNameTextString[0]))
+                                {
+                                    FileStream FileContent = FileInfo.OpenRead();
+                                    if (FileContent.ToString().Contains(FileNameTextString[1]))
+                                        this.Files.Add(FileInfo.FullName);
+                                }
+                            }
+                            break;
+                        }
+                }
+                
+            }
+            catch (UnauthorizedAccessException exc)
+            {
+            }
             try
             {
                 foreach (DirectoryInfo SubDirInfo in Directory.GetDirectories())
                 {
-                    return FindInDirectory(SubDirInfo);
-                }
+                    FindInDirectory(SubDirInfo, FileName, SearchType);
+                }   
             }
             catch (UnauthorizedAccessException exc)
             {
-                Console.WriteLine(exc.Message);
-                continue;
-            }
-            try
-            {
-                List<String> FileList=new List<String>();
-                foreach (FileInfo FileInfo in Directory.GetFiles())
-                {
-                    FileList.Add(FileInfo.FullName);
-                }
-                return FileList;
-            }
-            catch (UnauthorizedAccessException exc)
-            {
-                Console.WriteLine(exc.Message);
-                continue;
             }
         }
     }

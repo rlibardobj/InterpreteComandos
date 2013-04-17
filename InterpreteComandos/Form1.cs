@@ -21,11 +21,16 @@ namespace InterpreteComandos
 
         private void button1_Click(object sender, EventArgs e)
         {
-            List<String> Result = (List<String>)Nucleo.EjecutarComando();
+            List<String> Result = (List<String>)Nucleo.ExecuteCommand(richTextBox1.Text);
             foreach (String s in Result)
             {
-                textBox1.Text = s + "\n";
+                richTextBox1.Text = richTextBox1.Text + s + "\n";
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            new V_procesos_servicios().Show();
         }
     }
 }

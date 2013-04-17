@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="InterpreteComandos.exe" size="9728">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="InterpreteComandos.exe" size="20480">
       <assemblyIdentity name="InterpreteComandos" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>UFxNgpP6F6BIJUnVI9Ff6caJuD8PGV6K+//J0Ao8RMc=</dsig:DigestValue>
+        <dsig:DigestValue>p/To7fPzxeYsGDvhsEkeSM2+8dJGzucqCP8mI7sfX4s=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
